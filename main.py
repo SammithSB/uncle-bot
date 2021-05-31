@@ -4,6 +4,8 @@ import requests
 import json
 import random
 from replit import db
+from keep_alive import keep_alive
+
 
 client = discord.Client()
 trigger_words = ["science", "logic", "experience", "don't agree"]
@@ -62,4 +64,5 @@ async def on_message(message):
   
   
 my_secret = os.environ['TOKEN']
+keep_alive()
 client.run(my_secret)
